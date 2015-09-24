@@ -1,0 +1,2 @@
+c:\users\pc\documents\visual studio 2013\Projects\TreeAndTreeOperations\TreeAndTreeOperations\bin\Debug\TreeAndTreeOperations.exe.config
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\TreeAndTreeOperations\TreeAndTreeOperations\Studying-with-Pesho-and-Mimeto\TreeAndTreeOperations\bin\Debug\TreeAndTreeOperations.exe.config
