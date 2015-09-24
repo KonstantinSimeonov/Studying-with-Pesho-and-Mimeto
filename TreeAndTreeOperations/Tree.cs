@@ -25,7 +25,7 @@ namespace TreeAndTreeOperations
         {
             for (int i = 0, length = this.Children.Count; i < length; i++)
             {
-                if(this.Children[i].Value == child)
+                if(this.Children[i].Value.Equals(child))
                 {
                     this.Children.RemoveAt(i);
                     return this;
