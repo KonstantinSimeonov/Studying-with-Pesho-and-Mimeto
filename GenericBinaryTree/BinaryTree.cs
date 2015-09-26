@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenericBinaryTree
+﻿namespace GenericBinaryTree
 {
+    using System;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// Binary tree component.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class Node<T>
     {
         public T Value { get; set; }
@@ -17,6 +18,7 @@ namespace GenericBinaryTree
             this.Value = value;
         }
 
+        // cause we cool
         public Node<T> this[int comparisonResult]
         {
             get
@@ -64,9 +66,7 @@ namespace GenericBinaryTree
 
         public void DisplayTree(int depth)
         {
-            // Display(0, this.Root);
-
-            BFS();
+            Display(0, this.Root);
         }
 
         private void Display(int depth, Node<T> node)
@@ -75,36 +75,12 @@ namespace GenericBinaryTree
             {
                 return;
             }
+
             Console.WriteLine(new string(' ', depth) + node.Value);
             this.Display(depth + 1, node.Left);
             this.Display(depth + 1, node.Right);
         }
 
-        private void BFS()
-        {
-            var nodes = new Queue<Node<T>>();
-            var counter = 1;
-            nodes.Enqueue(this.Root);
-            var depth = 8;
-
-            while (nodes.Count > 0)
-            {
-                var current = nodes.Dequeue();
-
-                Console.Write(current.Value + " ");
-                if(current.Left != null)
-                nodes.Enqueue(current.Left);
-                if(current.Right != null)
-                nodes.Enqueue(current.Right);
-
-                counter++;
-
-                if (Math.Log(counter, 2).Equals(Math.Round(Math.Log(counter, 2))))
-                {
-                    Console.Write("\n" + new string(' ', depth));
-                    depth /= 2;
-                }
-            }
-        }
+        
     }
 }
