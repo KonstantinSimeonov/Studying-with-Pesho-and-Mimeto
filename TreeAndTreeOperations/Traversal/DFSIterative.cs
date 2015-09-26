@@ -6,9 +6,9 @@ namespace TreeAndTreeOperations.Traversal
 {
     public class DFSIterative<T> : ITraversalStrategy<T>
     {
-        public void TraverseWithAction(ITree<T> tree, Action<T> action)
+        public void TraverseWithAction(IGraphNode<T> tree, Action<T> action)
         {
-            var stack = new Stack<ITree<T>>();
+            var stack = new Stack<IGraphNode<T>>();
 
             stack.Push(tree);
 

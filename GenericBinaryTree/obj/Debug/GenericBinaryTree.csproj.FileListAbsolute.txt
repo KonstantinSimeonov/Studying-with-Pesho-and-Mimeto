@@ -1,0 +1,6 @@
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\TreeAndTreeOperations\TreeAndTreeOperations\Studying-with-Pesho-and-Mimeto\GenericBinaryTree\bin\Debug\GenericBinaryTree.exe.config
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\TreeAndTreeOperations\TreeAndTreeOperations\Studying-with-Pesho-and-Mimeto\GenericBinaryTree\obj\Debug\GenericBinaryTree.csprojResolveAssemblyReference.cache
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\TreeAndTreeOperations\TreeAndTreeOperations\Studying-with-Pesho-and-Mimeto\GenericBinaryTree\bin\Debug\GenericBinaryTree.exe
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\TreeAndTreeOperations\TreeAndTreeOperations\Studying-with-Pesho-and-Mimeto\GenericBinaryTree\bin\Debug\GenericBinaryTree.pdb
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\TreeAndTreeOperations\TreeAndTreeOperations\Studying-with-Pesho-and-Mimeto\GenericBinaryTree\obj\Debug\GenericBinaryTree.exe
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\TreeAndTreeOperations\TreeAndTreeOperations\Studying-with-Pesho-and-Mimeto\GenericBinaryTree\obj\Debug\GenericBinaryTree.pdb

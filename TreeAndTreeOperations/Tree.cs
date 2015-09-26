@@ -4,24 +4,24 @@ using System.Linq;
 
 namespace TreeAndTreeOperations
 {
-    public class Tree<T> : ITree<T>
+    public class Tree<T> : IGraphNode<T>
     {
         public T Value { get; private set; }
 
-        public IList<ITree<T>> Children { get; private set; }
+        public IList<IGraphNode<T>> Children { get; private set; }
 
         public Tree(T value)
         {
             this.Value = value;
-            this.Children = new List<ITree<T>>();
+            this.Children = new List<IGraphNode<T>>();
         }
 
-        public ITree<T> AddChild(T child)
+        public IGraphNode<T> AddChild(T child)
         {
             return this.AddChild(new Tree<T>(child));
         }
 
-        public ITree<T> RemoveChild(T child)
+        public IGraphNode<T> RemoveChild(T child)
         {
             for (int i = 0, length = this.Children.Count; i < length; i++)
             {
@@ -36,13 +36,13 @@ namespace TreeAndTreeOperations
             return this;
         }
 
-        public ITree<T> AddChild(ITree<T> subtree)
+        public IGraphNode<T> AddChild(IGraphNode<T> subtree)
         {
             this.Children.Add(subtree);
             return this;
         }
 
-        public ITree<T> RemoveChild(ITree<T> child)
+        public IGraphNode<T> RemoveChild(IGraphNode<T> child)
         {
             this.Children.Remove(child);
             return this;

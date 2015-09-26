@@ -4,6 +4,6 @@
 
     public interface ITraversalStrategy<T>
     {
-        void TraverseWithAction(ITree<T> tree, Action<T> action);
+        void TraverseWithAction(IGraphNode<T> tree, Action<T> action);
     }
 }

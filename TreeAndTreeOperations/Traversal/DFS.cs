@@ -4,20 +4,20 @@ namespace TreeAndTreeOperations.TraversalStrategy
 {
     public class DFSRecursive<T> : ITraversalStrategy<T>
     {
-        public ITree<T> Tree { get; private set; }
+        public IGraphNode<T> Tree { get; private set; }
 
-        public DFSRecursive(ITree<T> tree)
+        public DFSRecursive(IGraphNode<T> tree)
         {
             this.Tree = tree;
         }
 
-        public void TraverseWithAction(ITree<T> tree, Action<T> action)
+        public void TraverseWithAction(IGraphNode<T> tree, Action<T> action)
         {
             action(tree.Value);
             this.TraverseChildNode(tree, action);
         }
 
-        private void TraverseChildNode(ITree<T> tree, Action<T> action)
+        private void TraverseChildNode(IGraphNode<T> tree, Action<T> action)
         {
             foreach (var child in tree.Children)
             {
