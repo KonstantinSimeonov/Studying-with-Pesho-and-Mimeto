@@ -40,7 +40,7 @@
         }
     }
 
-    public class BinaryTree<T>
+    public class BinaryTree<T> : IBinaryTree<T>
         where T : IComparable<T>
     {
         public ICoolBinaryNode<T> Root { get; private set; }
@@ -64,7 +64,7 @@
             parentOfCurrent[element.CompareTo(parentOfCurrent.Value)] = new Node<T>(element);
         }
 
-        public void DisplayTree(int depth)
+        public void Render(int depth)
         {
             Display(0, this.Root);
         }
@@ -81,6 +81,29 @@
             this.Display(depth + 2, node.Right);
         }
 
-        
+        // implement duh
+        #region NotImplemented
+
+        IBinaryTree<T> IBinaryTree<T>.Insert(T element)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IBinaryTree<T> Insert(IBinaryTree<T> tree)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IBinaryTree<T> Remove(T element)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IBinaryTree<T> Remove(ICoolBinaryNode<T> binaryNode)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
     }
 }
