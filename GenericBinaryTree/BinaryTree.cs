@@ -7,11 +7,11 @@
     /// Binary tree component.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class Node<T>
+    public class Node<T> : ICoolBinaryNode<T>
     {
         public T Value { get; set; }
-        public Node<T> Left { get; set; }
-        public Node<T> Right { get; set; }
+        public ICoolBinaryNode<T> Left { get; set; }
+        public ICoolBinaryNode<T> Right { get; set; }
 
         public Node(T value)
         {
@@ -19,7 +19,7 @@
         }
 
         // cause we cool
-        public Node<T> this[int comparisonResult]
+        public ICoolBinaryNode<T> this[int comparisonResult]
         {
             get
             {
@@ -43,7 +43,7 @@
     public class BinaryTree<T>
         where T : IComparable<T>
     {
-        public Node<T> Root { get; private set; }
+        public ICoolBinaryNode<T> Root { get; private set; }
 
         public BinaryTree(T rootValue)
         {
@@ -53,7 +53,7 @@
         public void Insert(T element)
         {
             var current = this.Root;
-            Node<T> parentOfCurrent = null;
+            ICoolBinaryNode<T> parentOfCurrent = null;
 
             while(current != null)
             {
@@ -69,7 +69,7 @@
             Display(0, this.Root);
         }
 
-        private void Display(int depth, Node<T> node)
+        private void Display(int depth, ICoolBinaryNode<T> node)
         {
             if(node == null)
             {
@@ -77,8 +77,8 @@
             }
 
             Console.WriteLine(new string(' ', depth) + node.Value);
-            this.Display(depth + 1, node.Left);
-            this.Display(depth + 1, node.Right);
+            this.Display(depth + 2, node.Left);
+            this.Display(depth + 2, node.Right);
         }
 
         
