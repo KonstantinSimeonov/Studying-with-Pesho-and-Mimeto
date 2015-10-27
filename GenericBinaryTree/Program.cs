@@ -19,8 +19,6 @@ namespace GenericBinaryTree
             {
                 druvo.Insert(numbers[i]);
             }
-
-            druvo.Render(1);
         }
         static Random rnd =  new Random();
         static int GetRandomNumberBalancedAround(int pivot, int seed)
