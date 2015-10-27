@@ -1,5 +1,6 @@
 ﻿namespace GenericBinaryTree
 {
+    // TODO: documentation
     public interface ICoolBinaryNode<T>
     {
         T Value { get; set; }
