@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TreeAndTreeOperations.Traversal
+﻿namespace TreeAndTreeOperations.Traversal
 {
-    public class GraphBFS
+    using System;
+    using System.Collections.Generic;
+    public class GraphBFS<T> : ITraversalStrategy<T>
     {
-        public void TraverseWithAction<T>(IGraphNode<T> root, Action<T> action)
+        public void TraverseWithAction(IGraphNode<T> root, Action<T> action)
         {
             // queue for bfs
             var nodes = new Queue<IGraphNode<T>>();
@@ -27,7 +23,7 @@ namespace TreeAndTreeOperations.Traversal
 
                 foreach (var child in current.Children)
                 {
-                    if(!visited.Contains(child))
+                    if (!visited.Contains(child))
                     {
                         nodes.Enqueue(child);
                         visited.Add(child);

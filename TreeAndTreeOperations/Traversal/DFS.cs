@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace TreeAndTreeOperations.TraversalStrategy
+﻿namespace TreeAndTreeOperations.Traversal
 {
+    using System;
     public class DFSRecursive<T> : ITraversalStrategy<T>
     {
         public IGraphNode<T> Tree { get; private set; }
@@ -25,7 +24,7 @@ namespace TreeAndTreeOperations.TraversalStrategy
                 TraverseChildNode(child, action);
             }
 
-            Console.WriteLine("~~~~~ End of Node ~~~~~ " + tree.Value);
+           // Console.WriteLine("~~~~~ End of Node ~~~~~ " + tree.Value);
         }
     }
 }

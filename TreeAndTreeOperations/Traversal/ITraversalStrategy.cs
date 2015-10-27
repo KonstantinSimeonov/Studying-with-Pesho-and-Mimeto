@@ -1,4 +1,4 @@
-﻿namespace TreeAndTreeOperations.TraversalStrategy
+﻿namespace TreeAndTreeOperations.Traversal
 {
     using System;
 

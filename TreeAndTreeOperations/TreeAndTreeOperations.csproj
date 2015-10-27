@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GraphRepresentations\GraphBuilder.cs" />
+    <Compile Include="GraphRepresentations\IGraphBuilder.cs" />
     <Compile Include="IGraphNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -48,15 +50,12 @@
     <Compile Include="Traversal\DFSIterative.cs" />
     <Compile Include="Traversal\GraphBFS.cs" />
     <Compile Include="Traversal\ITraversalStrategy.cs" />
-    <Compile Include="Traversal\TraverseGraphDFS.cs" />
     <Compile Include="Tree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GraphRepresentation\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

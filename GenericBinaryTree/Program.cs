@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenericBinaryTree
+﻿namespace GenericBinaryTree
 {
-    class Program
+    using System;
+    public class Program
     {
         static void Main(string[] args)
         {

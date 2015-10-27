@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAndTreeOperations", "TreeAndTreeOperations\TreeAndTreeOperations.csproj", "{8916477B-E04E-48F8-8AB7-AB9D29A41829}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBinaryTree", "GenericBinaryTree\GenericBinaryTree.csproj", "{29491EA0-6EAE-4D59-A812-B67000CD5B45}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpDemos", "CSharpDemos\CSharpDemos.csproj", "{F28F18B6-7348-48ED-BB6B-F12590EB36DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{29491EA0-6EAE-4D59-A812-B67000CD5B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29491EA0-6EAE-4D59-A812-B67000CD5B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29491EA0-6EAE-4D59-A812-B67000CD5B45}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F28F18B6-7348-48ED-BB6B-F12590EB36DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F28F18B6-7348-48ED-BB6B-F12590EB36DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F28F18B6-7348-48ED-BB6B-F12590EB36DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F28F18B6-7348-48ED-BB6B-F12590EB36DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
