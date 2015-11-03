@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace TreeAndTreeOperations
+﻿namespace TreeAndTreeOperations
 {
-    public class Tree<T> : IGraphNode<T>
+    using System.Collections;
+    using System.Collections.Generic;
+
+    public class Tree<T> : IGraphNode<T>, IEnumerable<IGraphNode<T>>
     {
         public T Value { get; private set; }
 
@@ -27,7 +26,7 @@ namespace TreeAndTreeOperations
         {
             for (int i = 0, length = this.Children.Count; i < length; i++)
             {
-                if(this.Children[i].Value.Equals(child))
+                if (this.Children[i].Value.Equals(child))
                 {
                     foreach (var grandchild in this.Children[i].Children)
                     {
@@ -38,7 +37,7 @@ namespace TreeAndTreeOperations
                     this.Children.RemoveAt(i);
                     return this;
                 }
-                
+
             }
 
             return this;
@@ -54,6 +53,30 @@ namespace TreeAndTreeOperations
         {
             this.Children.Remove(child);
             return this;
+        }
+
+        public IEnumerator<IGraphNode<T>> GetEnumerator()
+        {
+            var stack = new Stack<IGraphNode<T>>();
+
+            stack.Push(this);
+
+            while (stack.Count > 0)
+            {
+                var currentTree = stack.Pop();
+
+                foreach (var child in currentTree.Children)
+                {
+                    stack.Push(child);
+                }
+
+                yield return currentTree;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

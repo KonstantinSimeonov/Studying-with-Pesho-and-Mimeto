@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using TreeAndTreeOperations.Traversal;
-using TreeAndTreeOperations.TraversalStrategy;
-
-using System.Linq;
-
-namespace TreeAndTreeOperations
+﻿namespace TreeAndTreeOperations
 {
+    using System;
+    using System.Collections.Generic;
+    using Traversal;
+
+    using System.Linq;
+
     class Program
     {
         static void Main()
@@ -31,15 +30,15 @@ namespace TreeAndTreeOperations
                                      .AddChild(child222)
                                  );
 
-            //var dfs = new DFSRecursive<string>(root);
+            // var dfs = new DFSRecursive<string>(root);
 
-            //dfs.TraverseWithAction(root, Console.WriteLine);
+            // dfs.TraverseWithAction(root, Console.WriteLine);
 
-            //var dfsIterative = new DFSIterative<string>();
+            // var dfsIterative = new DFSIterative<string>();
 
-            //Console.WriteLine("\n\nITERATIVE BELOW\n\n");
+            // Console.WriteLine("\n\nITERATIVE BELOW\n\n");
 
-            //dfsIterative.TraverseWithAction(root, x => Console.WriteLine(x));
+            // dfsIterative.TraverseWithAction(root, x => Console.WriteLine(x));
 
             // represent a graph using adjacency list
             var graphRepresentaion = new Dictionary<IGraphNode<string>, IList<IGraphNode<string>>>() 
@@ -64,11 +63,11 @@ namespace TreeAndTreeOperations
                 }
             }
 
-            //var visited = new List<IGraphNode<string>>();
+            // var visited = new List<IGraphNode<string>>();
 
-            //var nodes = new Queue<IGraphNode<string>>();
+            // var nodes = new Queue<IGraphNode<string>>();
 
-            new GraphBFS().TraverseWithAction(root, x => Console.WriteLine(x));
+            // new GraphBFS().TraverseWithAction(root, x => Console.WriteLine(x));
             
 
             var gosho = new int[] { 1, 2, 3, 4, 5, 6, 7 }.Where(x => x % 2 == 0).Select(x => x + 3).ToArray();
