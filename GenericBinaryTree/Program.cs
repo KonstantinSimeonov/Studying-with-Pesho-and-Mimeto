@@ -3,7 +3,7 @@
     using System;
     public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             var rnd = new Random();
             var druvo = new BinaryTree<int>(50);

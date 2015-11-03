@@ -4,11 +4,11 @@
 *.vshost
 *.suo
 
-[Bb]in/
-[Oo]bj/
-[Dd]ebug/
-[Rr]elease/
-.vs/
-.vscode/
+/[Bb]in
+/[Oo]bj
+/[Dd]ebug
+/[Rr]elease
+/.vs
+/.vscode
 *.exe
 TreeAndTreeOperations/bin/Debug/TreeAndTreeOperations.vshost.exe

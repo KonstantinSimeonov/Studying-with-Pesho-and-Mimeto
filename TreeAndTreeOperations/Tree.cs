@@ -8,6 +8,8 @@ namespace TreeAndTreeOperations
     {
         public T Value { get; private set; }
 
+        public IGraphNode<T> Parent { get; set; }
+
         public IList<IGraphNode<T>> Children { get; private set; }
 
         public Tree(T value)
@@ -27,6 +29,12 @@ namespace TreeAndTreeOperations
             {
                 if(this.Children[i].Value.Equals(child))
                 {
+                    foreach (var grandchild in this.Children[i].Children)
+                    {
+                        grandchild.Parent = this;
+                        this.Children.Add(grandchild);
+                    }
+
                     this.Children.RemoveAt(i);
                     return this;
                 }

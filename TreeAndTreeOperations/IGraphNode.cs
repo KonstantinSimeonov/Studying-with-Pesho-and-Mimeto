@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TreeAndTreeOperations
+﻿namespace TreeAndTreeOperations
 {
+    using System.Collections.Generic;
+
     public interface IGraphNode<T>
     {
         T Value { get; }
+
+        IGraphNode<T> Parent { get; set; }
 
         IList<IGraphNode<T>> Children { get; }
         IGraphNode<T> AddChild(T child);
