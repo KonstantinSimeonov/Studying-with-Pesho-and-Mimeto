@@ -19,7 +19,10 @@
 
         public IGraphNode<T> AddChild(T child)
         {
-            return this.AddChild(new Tree<T>(child));
+            var childNode = new Tree<T>(child);
+            childNode.Parent = this;
+
+            return this.AddChild(childNode);
         }
 
         public IGraphNode<T> RemoveChild(T child)
@@ -45,6 +48,7 @@
 
         public IGraphNode<T> AddChild(IGraphNode<T> subtree)
         {
+            subtree.Parent = this;
             this.Children.Add(subtree);
             return this;
         }
