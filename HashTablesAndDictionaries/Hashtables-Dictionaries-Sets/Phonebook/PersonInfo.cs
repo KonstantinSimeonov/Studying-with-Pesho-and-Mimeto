@@ -15,7 +15,7 @@
                 return true;
             }
 
-            if(obj as PersonInfo == null)
+            if(!(obj is PersonInfo))
             {
                 return false;
             }

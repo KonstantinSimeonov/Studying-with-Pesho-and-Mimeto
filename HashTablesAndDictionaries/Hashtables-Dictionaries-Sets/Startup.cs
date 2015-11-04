@@ -55,16 +55,16 @@
                 });
             });
 
-            var queries = new string[][]
+            var queries = new[]
             {
                 new string[] { "Mimi" },
                 new string[] { "Bat Gancho" },
                 new string[] { "Bat Gancho", "Pleven" }
             };
 
-            queries.ForEach(x => 
+            queries.ForEach(x =>
             {
-                if(x.Length == 1)
+                if (x.Length == 1)
                 {
                     phonebook.Find(x[0]).StringJoin().Print();
                 }

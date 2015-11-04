@@ -7,7 +7,7 @@
 
     public class PhoneBook
     {
-        private IDictionary<string, ICollection<PersonInfo>> byName;
+        private readonly IDictionary<string, ICollection<PersonInfo>> byName;
 
         public PhoneBook(IDictionary<string, ICollection<PersonInfo>> foundation)
         {
