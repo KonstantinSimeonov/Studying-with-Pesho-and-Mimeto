@@ -1,8 +1,9 @@
-﻿namespace HashtablesDictionariesSets
+﻿namespace HashtablesDictionariesSets.HashedSet
 {
-    using System;
     using System.Collections;
     using System.Collections.Generic;
+    using System.Linq;
+    using HashTable;
 
     public class HashedSet<T> : IHashedSet<T>
     {
@@ -49,7 +50,8 @@
 
         public bool Contains(T item)
         {
-            return this.elements.ContainsKey(item.GetHashCode());
+            return this.elements.ContainsKey(item.GetHashCode()) 
+                && this.elements[item.GetHashCode()].Equals(item);
         }
 
         public void CopyTo(T[] array, int arrayIndex)
@@ -80,32 +82,44 @@
             return this.GetEnumerator();
         }
 
-        public IHashedSet<T> UnionWith(ICollection<T> collection)
+        public IHashedSet<T> UnionWith(params ICollection<T>[] sets)
         {
             var result = new HashedSet<T>();
 
             foreach (var item in this)
             {
-                result.Add(item);
+                if (!result.Contains(item))
+                {
+                    result.Add(item);
+                }
             }
 
-            foreach (var item in collection)
+            foreach (var set in sets)
             {
-                result.Add(item);
+                foreach (var item in set)
+                {
+                    if (!result.Contains(item))
+                    {
+                        result.Add(item);
+                    }
+                }
             }
 
             return result;
         }
 
-        public IHashedSet<T> IntersectWith(ICollection<T> collection)
+        public IHashedSet<T> IntersectWith(params ICollection<T>[] sets)
         {
             var result = new HashedSet<T>();
 
-            foreach (var item in collection)
+            foreach (var set in sets)
             {
-                if (this.Contains(item))
+                foreach (var item in set)
                 {
-                    result.Add(item);
+                    if (this.Contains(item) && sets.All(s => s.Contains(item)))
+                    {
+                        result.Add(item);
+                    }
                 }
             }
 

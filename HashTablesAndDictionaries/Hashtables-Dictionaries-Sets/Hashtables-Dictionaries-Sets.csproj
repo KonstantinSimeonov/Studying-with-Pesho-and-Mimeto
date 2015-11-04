@@ -44,10 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions.cs" />
-    <Compile Include="HashedSet.cs" />
-    <Compile Include="HashTable.cs" />
-    <Compile Include="IHashedSet.cs" />
+    <Compile Include="HashedSet\HashedSet.cs" />
+    <Compile Include="HashTable\HashTable.cs" />
+    <Compile Include="HashedSet\IHashedSet.cs" />
     <Compile Include="OccurencesCounter.cs" />
+    <Compile Include="Phonebook\PersonInfo.cs" />
+    <Compile Include="Phonebook\PhoneBook.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

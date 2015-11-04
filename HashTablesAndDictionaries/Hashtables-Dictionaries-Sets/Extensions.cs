@@ -3,6 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using System.Text.RegularExpressions;
+    using System.Linq;
 
     internal static class Extensions
     {
@@ -23,6 +25,11 @@
             }
 
             return ch - 48;
+        }
+
+        public static bool IsMatch(this string str, string pattern)
+        {
+            return Regex.IsMatch(str, pattern, RegexOptions.IgnoreCase);
         }
 
         public static char ToChar(this int code)

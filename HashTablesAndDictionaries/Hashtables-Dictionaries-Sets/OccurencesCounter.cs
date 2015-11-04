@@ -25,11 +25,22 @@
             Punctuation = nonLetters.ToArray();
         }
 
+        /// <summary>
+        /// Write a program that counts in a given array of double values the
+        /// number of occurrences of each value. Use Dictionary<TKey,TValue>.
+        /// </summary>
+        /// <param name="numbers"></param>
+        /// <returns></returns>
         public static IDictionary<double, int> GetDoubleOccurrencesWithin(IEnumerable<double> numbers)
         {
             return GetOccurrencesCountsWithin(numbers);
         }
 
+        /// <summary>
+        /// Write a program that extracts from a given sequence of strings all elements that present in it odd number of times.
+        /// </summary>
+        /// <param name="strings"></param>
+        /// <returns></returns>
         public static IDictionary<string, int> GetOddOccurringElements(IEnumerable<string> strings)
         {
             var result = GetOccurrencesCountsWithin(strings)
@@ -39,6 +50,12 @@
             return result;
         }
 
+        /// <summary>
+        /// Write a program that counts how many times each word from given text file words.txt appears in it. 
+        /// The character casing differences should be ignored. The result words should be ordered by their number of occurrences in the text. 
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         public static IDictionary<string, int> GetOccurrencesFromText(string text)
         {
             var words = text.Split(Punctuation, StringSplitOptions.RemoveEmptyEntries)

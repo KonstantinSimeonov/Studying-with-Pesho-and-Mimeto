@@ -1,4 +1,4 @@
-﻿namespace HashtablesDictionariesSets
+﻿namespace HashtablesDictionariesSets.HashTable
 {
     using System;
     using System.Collections;
