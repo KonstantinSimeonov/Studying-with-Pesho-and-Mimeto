@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions.cs" />
+    <Compile Include="HashedSet.cs" />
     <Compile Include="HashTable.cs" />
+    <Compile Include="IHashedSet.cs" />
     <Compile Include="OccurencesCounter.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

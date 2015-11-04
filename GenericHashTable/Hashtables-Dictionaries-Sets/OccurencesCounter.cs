@@ -52,11 +52,11 @@
             return result;
         }
 
-        private static IDictionary<T, int> GetOccurrencesCountsWithin<T>(IEnumerable<T> numbers)
+        private static IDictionary<T, int> GetOccurrencesCountsWithin<T>(IEnumerable<T> sequence)
         {
             var occurrences = new Dictionary<T, int>();
 
-            numbers.ForEach(x =>
+            sequence.ForEach(x =>
             {
                 if (!occurrences.ContainsKey(x))
                 {

@@ -4,6 +4,7 @@
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Text;
 
     public class HashTable<K, V> : IDictionary<K, V>
     {
@@ -44,6 +45,12 @@
             set
             {
                 var container = this.elements[this.GetNormalizedHash(key)];
+
+                if(container == null)
+                {
+                    this.Add(new KeyValuePair<K, V>(key, value));
+                    return;
+                }
 
                 var current = container.First;
 
@@ -94,7 +101,7 @@
 
                 foreach (var k in this.Keys)
                 {
-                    foreach (var element in this.elements[k.GetHashCode() % this.elements.Length])
+                    foreach (var element in this.elements[this.GetNormalizedHash(k)])
                     {
                         result.Add(element.Value);
                     }
@@ -199,11 +206,23 @@
             return exists;
         }
 
+        public override string ToString()
+        {
+            var result = new StringBuilder();
+
+            foreach (var kvp in this)
+            {
+                result.Append(kvp);
+                result.Append(", ");
+            }
+
+            return result.ToString();
+        }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return this.GetEnumerator();
         }
-
 
         private bool Remove(K key, V value, bool shouldRemoveValue)
         {
@@ -215,6 +234,11 @@
             this.Keys.Remove(key);
 
             var container = this.elements[this.GetNormalizedHash(key)];
+
+            if(container == null)
+            {
+                return false;
+            }
 
             var current = container.First;
 

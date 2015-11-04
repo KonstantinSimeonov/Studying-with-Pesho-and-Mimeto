@@ -1,0 +1,6 @@
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\Hashtables-Dictionaries-Sets\bin\Debug\Hashtables-Dictionaries-Sets.exe.config
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\Hashtables-Dictionaries-Sets\bin\Debug\Hashtables-Dictionaries-Sets.exe
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\Hashtables-Dictionaries-Sets\bin\Debug\Hashtables-Dictionaries-Sets.pdb
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\Hashtables-Dictionaries-Sets\obj\Debug\Hashtables-Dictionaries-Sets.csprojResolveAssemblyReference.cache
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\Hashtables-Dictionaries-Sets\obj\Debug\Hashtables-Dictionaries-Sets.exe
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\Hashtables-Dictionaries-Sets\obj\Debug\Hashtables-Dictionaries-Sets.pdb

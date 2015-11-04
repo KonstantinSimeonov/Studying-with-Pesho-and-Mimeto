@@ -1,0 +1,10 @@
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\HashTableTests\bin\Debug\HashTableTests.dll
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\HashTableTests\bin\Debug\HashTableTests.pdb
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\HashTableTests\bin\Debug\Hashtables-Dictionaries-Sets.exe
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\HashTableTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\HashTableTests\bin\Debug\Hashtables-Dictionaries-Sets.pdb
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\HashTableTests\obj\Debug\HashTableTests.csprojResolveAssemblyReference.cache
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\HashTableTests\obj\Debug\HashTableTests.dll
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\HashTableTests\obj\Debug\HashTableTests.pdb
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\HashTableTests\bin\Debug\Moq.dll
+C:\Users\Pc\Documents\Visual Studio 2015\Projects\Hashtables-Dictionaries-Sets\HashTableTests\bin\Debug\Moq.xml
